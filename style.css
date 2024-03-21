@@ -26,8 +26,17 @@ header nav ul li a:hover {
 }
 
 .intro-image {
-  height: 300px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #eee;
+  padding: 20px 0;
+}
+
+.intro-image img {
+  max-width: 100%;
+  height: auto;
 }
 
 .content {
@@ -46,4 +55,31 @@ footer {
 }
 footer p {
   margin: 5px 0;
+}
+
+.care-button {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.care-button:hover {
+  background-color: #2275d7;
+}
+
+@media (max-width: 768px) {
+  .intro-image .care-button {
+    font-size: 14px;
+    padding: 8px 16px;
+    top: 35%;
+  }
 }/*# sourceMappingURL=style.css.map */

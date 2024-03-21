@@ -1,0 +1,70 @@
+$primaryColor: #4a90e2; // En frisk blå nuance
+$secondaryColor: #76b852; // En grøn nuance, der komplementerer blå
+$textColor: #333;
+$backgroundColor: #f4f4f4; // En blød baggrundsfarve
+
+body {
+    font-family: Arial, sans-serif;
+    color: $textColor;
+    background-color: $backgroundColor;
+    line-height: 1.6; // Forbedrer læsbarheden
+}
+
+header {
+    background-color: $primaryColor;
+    padding: 10px 0;
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+
+        li {
+            display: inline;
+            margin: 0 15px;
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 18px;
+
+                &:hover, &.active {
+                    color: $secondaryColor;
+                }
+            }
+        }
+    }
+}
+
+.content {
+    padding: 20px;
+    max-width: 800px; // Begrænser bredden af teksten
+    margin: 0 auto; // Centrerer indholdet
+
+    h1 {
+        color: $primaryColor;
+    }
+}
+
+footer {
+    background-color: $secondaryColor;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+
+    p {
+        margin: 5px 0;
+    }
+}
+
+// Responsive styling
+@media (max-width: 768px) {
+    header nav ul li {
+        display: block;
+        text-align: left;
+    }
+
+    .content {
+        padding: 10px;
+    }
+}

@@ -34,9 +34,19 @@ header {
 }
 
 .intro-image {
-    height: 300px;
-    background-color: #eee; // Plads til et billede
+    height: auto; // Ændret fra fast højde til auto for at tilpasse billedets størrelse
+    display: flex; // Tilføjer flexbox for centrering
+    justify-content: center; // Centrerer indholdet (billedet) horisontalt
+    align-items: center; // Valgfrit, centrerer indholdet vertikalt
+    background-color: #eee;
+    padding: 20px 0; // Tilføjer lidt plads over og under billedet
 }
+
+.intro-image img {
+    max-width: 100%; // Begrænser billedets maksimale bredde
+    height: auto; // Sørger for at billedet bevarer sit proportionale forhold
+}
+
 
 .content {
     padding: 20px;
@@ -57,3 +67,32 @@ footer {
         margin: 5px 0;
     }
 }
+
+.care-button {
+    position: absolute; // Absolut positionering indenfor .intro-image
+    top: 85%; // Centrerer knappen vertikalt
+    left: 50%; // Centrerer knappen horisontalt
+    transform: translate(-50%, -50%); // Justerer knappens præcise position
+    background-color: $primaryColor; // Den primære blå farve
+    color: white; // Hvid tekstfarve
+    border: none; // Fjerner standard grænser
+    padding: 10px 20px; // Lidt polstring for at gøre knappen større
+    font-size: 16px; // Større skriftstørrelse
+    cursor: pointer; // Cursor ændres til pointer
+    text-decoration: none; // Fjerner standard tekst dekoration
+    border-radius: 5px; // Lidt afrundede hjørner
+}
+
+.care-button:hover {
+    background-color: darken($primaryColor, 10%); // Mørkere farve ved hover
+}
+
+@media (max-width: 768px) {
+    .intro-image .care-button {
+        font-size: 14px;
+        padding: 8px 16px;
+        top: 35%;
+    }
+}
+
+
